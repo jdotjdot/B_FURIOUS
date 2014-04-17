@@ -51,7 +51,7 @@ Function | Action Performed
 
 The car can be controlled via CURL:
 
-    curl <Arduino's-ip-address> -G <params>
+    curl -G http://<Arduino's-ip-address> <params>
 
 
 `<params>` is a string of integers.
@@ -61,17 +61,17 @@ The car can be controlled via CURL:
 
 For example,
 
-    curl <ip-address> -G 11255
+    curl -G http://<ip-address> 11255
 
 sends the car forward at top speed.
 
-    curl <ip-address> -G 10020
+    curl -G http://<ip-address> 10020
 
 moves the car backward very slowly.
 
-    curl <ip-address> -G 01255
-    curl <ip-address> -G 00000
-    curl <ip-address> -G 00125
+    curl -G http://<ip-address> 01255
+    curl -G http://<ip-address> 00000
+    curl -G http://<ip-address> 00125
 
 All of the above (and anything else beginning with a zero) turn the motor off.
 
